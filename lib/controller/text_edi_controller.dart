@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatefulWidget {
@@ -26,15 +28,15 @@ class _CustomTextFieldState extends State<CustomTextField> {
       style: const TextStyle(color: Colors.black),
       decoration: InputDecoration(
         labelText: widget.hintText,
-        labelStyle: const TextStyle(color: Colors.grey),
+        labelStyle: const TextStyle(color: Color(0xFF89908F)),
         filled: true,
-        fillColor: Colors.white.withOpacity(0.9),
+        fillColor:  Color(0xFFEAEDEF),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: BorderRadius.circular(10),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Colors.grey),
-          borderRadius: BorderRadius.circular(30),
+          borderSide: const BorderSide(color: Color(0xFF0c6c28)),
+          borderRadius: BorderRadius.circular(10),
         ),
         suffixIcon: widget.isPassword
             ? IconButton(
