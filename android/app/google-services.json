@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "482837518599",
+    "project_id": "boxcontroller-694ad",
+    "storage_bucket": "boxcontroller-694ad.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482837518599:android:9f6c357ef6272fcf6acda2",
+        "android_client_info": {
+          "package_name": "com.example.box_controller"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdMagcAmusoepUxhuTW6Ywa7_tawG1at0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

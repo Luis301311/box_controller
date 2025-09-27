@@ -37,6 +37,9 @@ dependencies:
   flutter_screenutil:
   curved_navigation_bar:
   get:
+  cloud_firestore:
+  firebase_storage:
+  firebase_core:
 dev_dependencies:
   flutter_test:
     sdk: flutter
