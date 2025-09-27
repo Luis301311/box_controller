@@ -95,7 +95,7 @@ class _CustomProductFieldState extends State<CustomProductField> {
   Widget build(BuildContext context) {
     return TextField(
       controller: widget.controller,
-      readOnly: true, // 👈 no se escribe, solo selecciona
+      readOnly: true,
       decoration: InputDecoration(
         labelText: widget.hintText,
         labelStyle: const TextStyle(color: Color(0xFF89908F)),
