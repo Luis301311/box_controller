@@ -3,12 +3,14 @@ import 'dart:ffi';
 import 'package:box_controller/models/Product.dart';
 
 class Day {
+  DateTime date;
   String name; 
   List<Product> products; 
-  Float value; 
+  double value; 
 
 
   Day({
+    required this.date,
     required this.name,
     required this.products,
     required this.value
@@ -20,9 +22,19 @@ class Day {
 
   Map <String, dynamic> tomap(){
     return {
+      'date': date,
       'name': name,
       'products': products.map((e) => e.tomap()).toList(),
       'value' : value,
     };
+  }
+
+  factory Day.fromMap(Map<String, dynamic> map){
+    return Day(
+      date: map['date'],
+      name: map['name'],
+      products: (map['products'] as List).map((e) => Product.fromMap(e)).toList(), 
+      value: map['value']
+      );
   }
 }

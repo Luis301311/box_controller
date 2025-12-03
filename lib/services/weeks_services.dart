@@ -7,9 +7,13 @@ class WeeksServices {
 
   Future<String>  saveWeeks(Weeks weeks ) async{
     DocumentReference docfr = await  _firestore.collection(weekCollection).add(weeks.tomap());
-
     return docfr.id; 
-    
   }
+
+  Future<List<Weeks>> getAllWeeks() async{
+    QuerySnapshot  snapshot = await _firestore.collection(weekCollection).get(); 
+    return snapshot.docs.map((doc) => Weeks.fromMap(doc.data() as Map<String, dynamic> )).toList(); 
+  }
+
 
 }
