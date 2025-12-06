@@ -2,22 +2,19 @@ import 'package:box_controller/models/Day.dart';
 
 class Weeks {
   DateTime startDate;
-  DateTime endDate;
-  List<Day> days;
-  String status; 
+  DateTime? endDate;
+  String? status; 
 
   Weeks({
     required this.startDate,
-    required this.endDate,
-    required this.days,
-    required this.status
+    this.endDate,
+    this.status
   });
 
   Map <String, dynamic> tomap(){
     return {
       'startDate': startDate.toIso8601String(),
-      'endDate': endDate.toIso8601String(),
-      'days': days.map((e)=> e.tomap()).toList(),
+      'endDate': endDate?.toIso8601String(),
       'status' : status,
     };
   }
@@ -26,11 +23,8 @@ class Weeks {
     return Weeks(
       startDate: map['startDate'], 
       endDate: map['endDate'], 
-      days: (map['days'] as List).map((e) => Day.fromMap(e)).toList(), 
       status: map['status']
       );
   }
 
-  double get total => days.fold(0, (sum, d) => sum + d.totalQuantity); 
-  
 }

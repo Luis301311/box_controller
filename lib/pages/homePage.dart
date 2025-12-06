@@ -1,7 +1,8 @@
+import 'dart:nativewrappers/_internal/vm/lib/internal_patch.dart';
+
 import 'package:box_controller/controller/weeks_controller.dart';
 import 'package:box_controller/models/Day.dart';
 import 'package:box_controller/models/Product.dart';
-import 'package:box_controller/models/Week.dart';
 import 'package:box_controller/widgets/customDateField.dart';
 import 'package:box_controller/widgets/customProductField.dart';
 import 'package:box_controller/widgets/text_edi_controller.dart';
@@ -94,26 +95,17 @@ class _HomePageState extends State<HomePage> {
 
 
   void  saveDayinWeek() async{
-    List<Weeks> week =  await weeksController.filteredWeeks();
     DateTime today = DateTime.now();
     
     
 
     Day day = Day(
       date: today, 
-      name: ' dasd', 
       products: newProductsList,  
-      value: 1 );
+      value: 0 );
     
-    final weekRange = getWeekRange(today);
-    Weeks weeks = Weeks(
-      startDate: today, 
-      endDate: today, 
-      days: [], 
-      status: '');
-      
-    weeksController.addWeeks(weeks);
-
+    printToConsole(day.name);
+    weeksController.updateDayWeeks(day);
   }
 
 } 

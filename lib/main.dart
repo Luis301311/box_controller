@@ -1,4 +1,5 @@
 import 'package:box_controller/pages/PaymentPage.dart';
+import 'package:box_controller/pages/homePage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart'; 
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: PaymentPage(), // Tu página principal
+          home: HomePage(), // Tu página principal
         );
       },
     );
